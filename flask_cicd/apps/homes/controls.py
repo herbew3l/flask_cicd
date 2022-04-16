@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 import os
-from flask import Blueprint, render_template, redirect, session
+from flask import Blueprint, render_template, redirect, session, url_for
 from flask_login import logout_user, current_user, login_required
 
 
