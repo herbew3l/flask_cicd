@@ -48,7 +48,7 @@ def load_user(user_id):
 
 @app.route("/")
 def main():
-    return redirect('/users/list')
+    return redirect('/login')
 
 
 if __name__ == "__main__":
