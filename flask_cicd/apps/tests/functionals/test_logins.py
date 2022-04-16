@@ -9,6 +9,7 @@ def test_login_route(app, client):
     """
     with app.test_client() as test_client:
         res = test_client.get('/login')
+        print("test_login_route__status_code__%s" % res.status_code)
         assert res.status_code == 308
 
 if __name__ == "__main__":
