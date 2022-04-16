@@ -10,7 +10,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import (login_user, 
                          login_required, logout_user, current_user)
 
-from flask_paginate import Pagination, get_page_args
+#from flask_paginate import Pagination, get_page_args
 
 
 from flask_cicd.apps.logins.forms.users import LoginForm, RegisterForm
@@ -70,15 +70,15 @@ def signup():
 
 @loginbp.route('/users/list')
 def users_list():
-    page, per_page, offset = get_page_args(page_parameter='page',
-                                           per_page_parameter='per_page')
-    total = len(users)
-    pagination_users = get_users(offset=offset, per_page=per_page)
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='bootstrap4')
+    # page, per_page, offset = get_page_args(page_parameter='page',
+    #                                        per_page_parameter='per_page')
+    # total = len(users)
+    # pagination_users = get_users(offset=offset, per_page=per_page)
+    # pagination = Pagination(page=page, per_page=per_page, total=total,
+    #                         css_framework='bootstrap4')
     return render_template('users/lists.html',
-                           users=pagination_users,
-                           page=page,
-                           per_page=per_page,
-                           pagination=pagination,
+                           # users=pagination_users,
+                           # page=page,
+                           # per_page=per_page,
+                           # pagination=pagination,
                            )
