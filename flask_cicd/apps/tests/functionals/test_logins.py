@@ -11,5 +11,6 @@ def test_login_route(app, client):
         res = test_client.get('/login')
         assert res.status_code == 308
 
-
+if __name__ == "__main__":
+    test_login_route(app, client)
 
